@@ -1,0 +1,300 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 280px; /* Further increased offset */
+}
+
+.sticky-top-section {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff; /* White background for the entire sticky section */
+    z-index: 1000;
+    padding: 20px 40px 0; /* Add horizontal padding */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    background-color: #f4f4f9; /* New distinct body background */
+    color: #333333;
+    margin: 0;
+    padding: 0; /* Remove padding to allow header to span full width */
+}
+
+/* Main CV Container */
+.cv-container {
+    max-width: 950px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-top: 5px solid #3fd2c7; /* Accent Color 1 */
+}
+
+/* Header */
+.cv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #e9ecef;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.cv-header h1 {
+    margin: 0;
+    color: #00458b; /* Accent Color 3 (Dark Blue) */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.cv-header .job-title {
+    margin: 0;
+    font-size: 1.3em;
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    text-align: right;
+    font-size: 0.95em;
+}
+
+.contact-info a {
+    color: #3fd2c7; /* Accent Color 1 */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #00458b; /* Accent Color 3 */
+}
+
+/* Navigation Bar */
+.cv-nav {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e9ecef;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.cv-nav a {
+    color: #00458b; /* Accent Color 3 */
+    background-color: #99ddff; /* New background for nav tabs */
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 22px; /* Slightly larger padding */
+    border-radius: 25px; /* More pronounced rounding */
+    transition: all 0.3s ease;
+}
+
+.cv-nav a:hover {
+    background-color: #3fd2c7; /* Accent Color 1 on Hover */
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Main Content Sections */
+.cv-main {
+    padding-top: 10px;
+}
+
+.cv-section {
+    margin-bottom: 40px;
+    padding-left: 25px;
+    border-left: 4px solid #3fd2c7; /* Accent Color 1 */
+    animation: fadeIn 1s ease-in-out;
+}
+
+.cv-section h2 {
+    color: #00458b; /* Accent Color 3 */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+}
+
+.cv-section h2 i {
+    margin-right: 15px;
+    color: #3fd2c7; /* Accent Color 1 */
+}
+
+/* Work Experience */
+.job {
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.job:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 10px;
+    height: 10px;
+    background-color: #3fd2c7; /* Accent Color 1 */
+    border-radius: 50%;
+}
+
+.job h3 {
+    margin-bottom: 5px;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.job-details {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.job ul {
+    padding-left: 20px;
+    list-style-type: circle;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.skill-category h3 {
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-category li {
+    background: #e6f8ff; /* Lighter version of Accent 2 */
+    color: #00458b; /* Accent Color 3 */
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.skill-category li:hover {
+    background-color: #3fd2c7; /* Accent Color 1 on Hover */
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+/* Referees Section */
+.referee-item {
+    margin-bottom: 15px;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 180px; /* Increased offset for mobile to ensure titles are visible */
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .cv-container {
+        padding: 20px;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .sticky-top-section {
+        padding: 15px 20px;
+    }
+
+    .cv-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cv-header h1 {
+        font-size: 2.2em; /* Smaller font for mobile */
+    }
+
+    .contact-info {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .contact-info p {
+        text-align: center;
+        font-size: 0.9em;
+    }
+
+    .cv-nav {
+        justify-content: flex-end; /* Align toggle to the right */
+    }
+
+    .nav-toggle {
+        display: block; /* Show hamburger icon */
+        background: none;
+        border: none;
+        font-size: 1.8em;
+        color: #00458b;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #ffffff;
+        padding: 20px 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.show {
+        display: flex; /* Show links when toggled */
+    }
+
+    .nav-links a {
+        margin-bottom: 10px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-section {
+        padding-left: 15px;
+        border-left-width: 3px;
+    }
+
+    .cv-section h2 {
+        font-size: 1.5em;
+    }
+}
